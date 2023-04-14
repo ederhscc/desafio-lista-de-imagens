@@ -1,57 +1,53 @@
-body {
-    background-color: #FFFFFF;
+html {
     font-family: 'Public Sans', sans-serif;
 }
 
-.main {
-    display: flex;
+main {
+    display: flex;    
+    /* 100% da tela que o usuário vê. */
+    min-height: 100vh;
+    /* Depois disso posso alinhar horizontalmente e verticalmente. */
+    justify-content: center;
     align-items: center;
-    height: 100ch;
-}
-
-.container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.list-img {
-    display: flex;
-    align-items: center;
-
-}
-
-.list-img li {
-    padding: 10px;
-}
-
-.list-img .item {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
- .list-img .item h2 {
-    position: absolute;
-    margin-bottom: 60px;
-    margin-left: 26px;
-    font-weight: 700;
-    font-size: 30px;
-    color: #FFFFFF;
-}
-
-.list-img .item p {
-    position: absolute;   
-    margin-bottom: 40px;
-    margin-left: 26px;
-    font-weight: 300;
-    font-size: 17px;
-    color: #FFFFFF;
     
 }
 
-.list-img li img {
+.pinturas {
+    display: flex;
+    /* Espaços entre elementos */
+    gap: 20px;
+    justify-content: center;
+    /* Tornar mais responsivo */
+    flex-wrap: wrap;
+}
+
+.pinturas .pintura {
     width: 335px;
     height: 431px;
+    position: relative;
+
 }
+
+.pinturas .pintura img {
+    /* Caso mude a pintura ela sempre se ajustará. */
+    width: 100%;
+}
+
+.pinturas .pintura .informacoes {
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 40px;
+    left: 20px;
+}
+
+.pinturas .pintura .informacoes .titulo {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+
+.pinturas .pintura .informacoes .subtitulo {
+    font-size: 17px;
+    font-weight: 300;
+}
+
